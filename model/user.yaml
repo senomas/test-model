@@ -1,0 +1,42 @@
+id: user
+description: User
+fields:
+  _id:
+    type: ID
+    validations:
+      auto-generate: true
+      length: 16
+  login:
+    type: String
+    validations:
+      mandatory: true
+      min-length: 4
+      max-length: 64
+      email: true
+  password:
+    type: String
+    validations:
+      max-length: 256
+      base64: true
+  firstName:
+    type: String
+    validations:
+      mandatory: true
+      max-length: 256
+  lastName:
+    type: String
+    validations:
+      max-length: 256
+  motherMaidenName:
+    type: String
+    validations:
+      max-length: 256
+  address:
+    type: Address
+primary:
+- _id
+keys:
+  login:
+    fields:
+    - login
+    unique: true

@@ -1,0 +1,11 @@
+id: address
+description: Address
+fields:
+  street:
+    type: String
+    validations:
+      mandatory: true
+  city:
+    type: String
+    validations:
+      mandatory: true
